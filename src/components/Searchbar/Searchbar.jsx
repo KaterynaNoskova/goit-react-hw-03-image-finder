@@ -22,7 +22,7 @@ export class Searchbar extends Component {
     const { searchQuery } = this.state;
     return (
       <header>
-        <form className={css.SearchForm}>
+        <form className={css.SearchForm} onSubmit={this.submit}>
           <button type="submit" className={css.SearchFormButton}>
             <span className={css.SearchFormButtonLabel}>Search</span>
           </button>
