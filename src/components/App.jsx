@@ -86,8 +86,8 @@ export class App extends Component {
     }
   };
 
-  showSelectedImage = selectedImage => {
-    this.setState({ selectedImage });
+  showSelectedImage = selectImage => {
+    this.setState({ selectImage });
     this.toggleModal();
   };
   render() {
