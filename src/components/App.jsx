@@ -56,8 +56,9 @@ export class App extends Component {
       }));
 
       if (this.state.images === totalHits) {
-        this.setState({ allImagesLoad: true });
+        this.setState({ allImagesLoad: true })      
       }
+      
     } catch (error) {
       this.setState({ error });
     } finally {
@@ -99,11 +100,11 @@ export class App extends Component {
         {images.length > 0 && (
           <ImageGallery images={images} onImageClick={this.showSelectedImage} />
         )}
-        {isLoading && <InfinitySpin width={200} color="pink" />}
+        {isLoading && (<InfinitySpin width={200} color="pink" />)}
         {images.length > 0 && (
           <Button
             text="Load more"
-            disable={allImagesLoad}
+            disabled={allImagesLoad}
             click={this.showMoreImages}
             isLoading={isLoading}
           />
